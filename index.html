@@ -45,9 +45,9 @@
 	header{width: 100%;height: 600px; padding:150px 0px; background-color: rgb(252, 255, 126); text-align: center; }
 	.title{font-family: "Montserrat", sans-serif;
 	  font-optical-sizing: auto;
-	  font-style: normal; font-size: 11rem; padding-bottom: 50px; line-height: 180px; animation: fontAnimation 2s infinite alternate; }
+	  font-style: normal; font-size: 11rem; padding-bottom: 50px; line-height: 160px; animation: fontAnimation 2s infinite alternate; }
 	 .wrap{width: 1200px; margin: auto;}
-	 .fontb1{font-family: 'Pretendard-Bold'; font-size: 1.7rem; line-height: 40px;}
+	 .fontb1{font-family: 'Pretendard-Bold'; font-size: 1.7rem; line-height: 35px;}
 	 .fontb2{font-family: 'Pretendard-Bold'; font-size: 2rem; line-height: 40px; color:rgb(252, 255, 126)}
 	 .fontm1{font-family: 'Pretendard-Medium'; font-size: 1.3rem; line-height: 31px; padding: 20px 0px;}
 	 .fontm2{font-family: 'Pretendard-Medium'; font-size: 1rem; line-height: 30px;}
@@ -89,14 +89,16 @@
 	 .bg_white{background-color: white;}
 	 .bg_black{background-color: black; color: white; padding-top: 50px; height: 950px}
 	 .bg_black2{background-color: black; color: white; padding-top: 50px; height: 1300px}
-	 .bg_lemon{background-color: rgb(252, 255, 126);}
+	 .bg_lemon{background: linear-gradient(to bottom, rgba(252, 255, 126, 1) 0%,
+    rgba(252, 255, 126, 1) 50%, rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 1) 100% ); }
 
 	 .content01{width: 42%;float: right;}
 	 .content02{width: 40%; padding-top: 150px; padding-left: 30px; height: 370px}
-	 .content03{width: 42%;float: right; padding-top: 400px;}
+	 .content03{width: 42%;float: right; pading-top: 400px;}
 	 .content04{padding: 150px 0px}
 	 .content05{padding-top: 100px;width: 400px;}
-	 .content06{padding: 20px; margin: 200px 0px;border: 2px solid black;}
+	 .content06{padding: 20px; margin: 300px 0px;border-bottom: 2px solid black; border-left: 2px solid black; display: block;}
 
 
 	 .container{display: flex; justify-content: space-evenly; flex-wrap: wrap; width: 100%}
@@ -111,23 +113,36 @@
   	.container4{display: flex;flex-direction: column;justify-content: space-between;}
 
   	.container5{display: flex; margin-top: 100px;}
+
 .left-item {
   flex: 0 0 60%;
   padding: 20px;
   overflow: hidden;
+  height: 2800px; 
 }
 
 .right-item {
   flex: 0 0 40%;
   background-color: black;
   padding: 20px;
-  overflow: hidden;
-  height: 1700px;
-  position: sticky;
+  height: 2700px;
+  position: relative;
   top: 0px
 }
+.sticky-image {
+  position: sticky;
+  top: -20px;}
 
-  	.bluebox{background-color:rgb(201, 213, 255); margin-top: 380px; border: 2px solid black; padding: 50px 30px;}
+.fixed-image {position: fixed;}
+
+#image2 {top: 300px;}
+
+#image3 {top: 410px; padding-left: 120px;width: 310px; z-index: 8}
+
+#image4 {width: 500px; top: 200px; z-index: 9; position: relative; overflow: hidden;}
+
+
+  	.bluebox{background-color:rgb(201, 213, 255); margin-top: 350px; border: 2px solid black; padding: 50px 30px;}
   	.whitebox{background-color: white; border: 2px solid black; padding: 50px 30px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);text-align: center;}
   	.lemonbox{background-color: rgb(252, 255, 126); border: 2px solid black; padding: 50px 30px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);text-align: center;}
 
@@ -149,13 +164,12 @@
 	 .highlight {background-color: rgb(252, 255, 126); color: black;}
 	 .highlight2 {background-color: black;}
 	 .highlight3 {background-color: black; color: white;}
+
 	 .underline {text-decoration: underline;}
-	 .q2{background-image: url(img/q2.png);margin: 0; background-size: cover; background-position: center; padding: 0px; background-attachment: fixed; background-repeat: no-repeat; height: 600px;}
+	 .q1{width: 500px; position: relative; left: 650px; top: -400px;}
+	 .q2{background-image: url(img/q2.png);margin: 0; background-size: cover; background-position: center; padding: 0px; background-attachment: fixed; background-repeat: no-repeat; height: 650px;}
 	 .talk{background-image: url(img/talk.gif);margin: 0; background-size: cover; background-position: center; padding: 0px; background-repeat: no-repeat; height: 700px; position: relative;}
 	 .end{background-image: url(img/end.png);margin: 0; background-size: contain; background-position: center; padding: 100px 0px; background-repeat: no-repeat; height: 1000px; position: relative;}
-
-
-
 
 	 @media only screen and (max-width: 700px)
 
@@ -311,14 +325,16 @@
 					<p><span class="highlight">미시세계</span>에서 물리량이 언덕처럼 연속적이지 않고 계단처럼 불연속적일 때 양자화되어 있다고 부른다.</p>
 				</div>
 			</div>
-				<img src="img/q1.png" style="width: 500px; position: relative; left: 650px; top: -400px;">
+				<img src="img/q1.png" class="q1">
 		</div>
 	</section>
 	<div class="q2">
-			<div class="wrap fontb2 content03">
-				<span class="highlight2">역학 力學</span>
-				<div class="fontm1 white">
-					<span class="highlight2">: 물체의 운동에 관한 법칙을 연구하는 물리학의 한 분야.</span>
+			<div class="wrap fontb2 content04">
+				<div class="content03">
+					<span class="highlight2">역학 力學</span>
+					<div class="fontm1 white">
+						<span class="highlight2">: 물체의 운동에 관한 법칙을 연구하는 물리학의 한 분야.</span>
+					</div>
 				</div>
 			</div>
 			
@@ -331,7 +347,9 @@
 		 	</div>
 		 	<div class="box_center">
 		 		<div class="container4">
-		 			<p>이중 슬릿 실험</p>
+		 			<div class="fontb1">
+		 				<p>이중 슬릿 실험</p>
+		 			</div>
 		 			<div class="content04">
 		 				<p> 양자역학에서, 전자는 입자이면서 동시에 파동이다.</p>
 		 			</div>
@@ -373,26 +391,30 @@
 					<div class="fontm3 content05">
 						<span class="highlight3">미시세계</span> 원자보다 작은 세계. 육안으로 볼 수 없고, 예측할 수 없다. 양자역학이 지배
 					</div>
-					<div class="content06">
+					<div class="content06 fontm2">
 						PN Junction Diode
 					</div>
-					<div class="content06">
+					<div class="content06 fontm2">
 						PNP Transistor
 					</div>
-					<div class="content06">
+					<div class="content06 fontm2">
 						Transistor Chip
 					</div>
-					<div class="fontm3 content05 ">
-						<span class="highlight3">거시세계</span> 원자보다 큰 세계. 육안으로 볼 수 있고, 예측할 수 있다. 고전역학이 지배
+					<div class="content06 fontm2">
+						IPhone
+					</div>
+					<div class="fontm3 content05 white">
+						<span class="highlight">거시세계</span> 원자보다 큰 세계. 육안으로 볼 수 있고, 예측할 수 있다. 고전역학이 지배
+					</div>
+					<div class="fontm1 white content04">					
+					코펜하겐 해석으로 이중 슬릿 실험과 같은 미시세계는 설명할 수 있지만, 거시세계에서 일어나는 현상들은 설명할 수 없었다.
 					</div>
 				</div>
 				<div class="right-item">
-					<div class="sticky-wrapper">
-						<img src="img/1.png" class="sticky-image">
-						<img src="img/2.png" class="sticky-image">
-						<img src="img/3.png" class="sticky-image">
-						<img src="img/4.png" class="sticky-image">
-					</div>
+					<img src="img/1.png" class="sticky-image" id="image1">
+					<img src="img/2.png" class="sticky-image" id="image2">
+					<img src="img/3.png" class="sticky-image" id="image3">
+					<img src="img/4.png" id="image4">
 				</div>
 			</div>
 		</div>
